@@ -17,6 +17,7 @@
 		14A05BE11C49271C0034B308 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A05BE01C49271C0034B308 /* Utils.swift */; };
 		14A05BE41C49370B0034B308 /* NibSceneShowRestaurant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14A05BE31C49370B0034B308 /* NibSceneShowRestaurant.xib */; };
 		14A05BE61C49372C0034B308 /* NibSceneShowRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A05BE51C49372C0034B308 /* NibSceneShowRestaurant.swift */; };
+		6C3E49F1DA15C53641DB0C33 /* libPods-EatWhat_mobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E9E8051146995E302B8841 /* libPods-EatWhat_mobile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,9 @@
 		14A05BE01C49271C0034B308 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		14A05BE31C49370B0034B308 /* NibSceneShowRestaurant.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibSceneShowRestaurant.xib; sourceTree = "<group>"; };
 		14A05BE51C49372C0034B308 /* NibSceneShowRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibSceneShowRestaurant.swift; sourceTree = "<group>"; };
+		14E9E8051146995E302B8841 /* libPods-EatWhat_mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EatWhat_mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E5C5DE9CF632B04B58CD6D3 /* Pods-EatWhat_mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatWhat_mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatWhat_mobile/Pods-EatWhat_mobile.release.xcconfig"; sourceTree = "<group>"; };
+		8B6D88747064E0B2C5B5156B /* Pods-EatWhat_mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatWhat_mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatWhat_mobile/Pods-EatWhat_mobile.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C3E49F1DA15C53641DB0C33 /* libPods-EatWhat_mobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1327C899224BEDB7F220B026 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B6D88747064E0B2C5B5156B /* Pods-EatWhat_mobile.debug.xcconfig */,
+				4E5C5DE9CF632B04B58CD6D3 /* Pods-EatWhat_mobile.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		14A05BBA1C48F0A20034B308 = {
 			isa = PBXGroup;
 			children = (
 				14A05BC51C48F0A20034B308 /* EatWhat_mobile */,
 				14A05BC41C48F0A20034B308 /* Products */,
+				1327C899224BEDB7F220B026 /* Pods */,
+				40F761822FA84D840FE5D129 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +111,14 @@
 			name = "show restaurant scene";
 			sourceTree = "<group>";
 		};
+		40F761822FA84D840FE5D129 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14E9E8051146995E302B8841 /* libPods-EatWhat_mobile.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14A05BD51C48F0A20034B308 /* Build configuration list for PBXNativeTarget "EatWhat_mobile" */;
 			buildPhases = (
+				3296BE9D845F40295A3824B9 /* Check Pods Manifest.lock */,
 				14A05BBF1C48F0A20034B308 /* Sources */,
 				14A05BC01C48F0A20034B308 /* Frameworks */,
 				14A05BC11C48F0A20034B308 /* Resources */,
+				2AF2DC385ABC08FF6C1AA0AC /* Embed Pods Frameworks */,
+				94658C04553568A5BEB24FD8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,6 +189,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AF2DC385ABC08FF6C1AA0AC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatWhat_mobile/Pods-EatWhat_mobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3296BE9D845F40295A3824B9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		94658C04553568A5BEB24FD8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatWhat_mobile/Pods-EatWhat_mobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14A05BBF1C48F0A20034B308 /* Sources */ = {
@@ -281,6 +356,7 @@
 		};
 		14A05BD61C48F0A20034B308 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B6D88747064E0B2C5B5156B /* Pods-EatWhat_mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EatWhat_mobile/Info.plist;
@@ -292,6 +368,7 @@
 		};
 		14A05BD71C48F0A20034B308 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E5C5DE9CF632B04B58CD6D3 /* Pods-EatWhat_mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EatWhat_mobile/Info.plist;
@@ -320,6 +397,7 @@
 				14A05BD71C48F0A20034B308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
