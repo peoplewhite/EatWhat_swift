@@ -1,25 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EatWhat_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat What" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEv-nC-OHq">
+                                <rect key="frame" x="0.0" y="64" width="320" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfH-qg-5Zs" userLabel="btnCreateNewRestaurant">
+                                <rect key="frame" x="130" y="189" width="60" height="30"/>
+                                <state key="normal" title="新增餐廳"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBM-t0-2VF" userLabel="btnShowNewRestaurant">
+                                <rect key="frame" x="130" y="269" width="60" height="30"/>
+                                <state key="normal" title="瀏覽餐廳"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jts-gC-rfQ" userLabel="btnDecideRestaurantForMeal">
+                                <rect key="frame" x="130" y="349" width="60" height="30"/>
+                                <state key="normal" title="一鍵決定"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MfH-qg-5Zs" firstAttribute="width" secondItem="hBM-t0-2VF" secondAttribute="width" id="1Re-SR-F4q"/>
+                            <constraint firstItem="MfH-qg-5Zs" firstAttribute="centerX" secondItem="hBM-t0-2VF" secondAttribute="centerX" id="1eV-zV-tUc"/>
+                            <constraint firstItem="hBM-t0-2VF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hq-6J-gFn"/>
+                            <constraint firstItem="Jts-gC-rfQ" firstAttribute="width" secondItem="hBM-t0-2VF" secondAttribute="width" id="3Pz-Ze-O76"/>
+                            <constraint firstItem="Jts-gC-rfQ" firstAttribute="height" secondItem="hBM-t0-2VF" secondAttribute="height" id="9DM-FU-bpQ"/>
+                            <constraint firstItem="MfH-qg-5Zs" firstAttribute="height" secondItem="hBM-t0-2VF" secondAttribute="height" id="DbA-cC-rxZ"/>
+                            <constraint firstItem="Jts-gC-rfQ" firstAttribute="top" secondItem="hBM-t0-2VF" secondAttribute="bottom" constant="50" id="EGG-cK-30n"/>
+                            <constraint firstItem="uEv-nC-OHq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="RxF-yL-ooR"/>
+                            <constraint firstItem="hBM-t0-2VF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a9v-3U-b55"/>
+                            <constraint firstItem="uEv-nC-OHq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="dov-DP-bC4"/>
+                            <constraint firstItem="uEv-nC-OHq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fHT-W5-DsQ"/>
+                            <constraint firstItem="Jts-gC-rfQ" firstAttribute="centerX" secondItem="hBM-t0-2VF" secondAttribute="centerX" id="ssE-bq-ASi"/>
+                            <constraint firstItem="hBM-t0-2VF" firstAttribute="top" secondItem="MfH-qg-5Zs" secondAttribute="bottom" constant="50" id="yu3-kK-D5r"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-28" y="370"/>
         </scene>
     </scenes>
 </document>
