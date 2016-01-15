@@ -10,12 +10,17 @@ import UIKit
 
 class NibSceneShowRestaurant: UIView {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+  @IBAction func btnFunctionBack(sender: AnyObject) {
+    UIView.animateWithDuration(0.5, animations: {() -> Void in
+      self.frame = CGRect(
+        x: UIScreen.mainScreen().bounds.width,
+        y: 0,
+        width: UIScreen.mainScreen().bounds.width,
+        height: UIScreen.mainScreen().bounds.height
+      )
+      }, completion: {(finished: Bool) -> Void in
+        self.removeFromSuperview()
+    })
+  }
 
 }

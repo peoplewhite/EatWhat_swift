@@ -26,7 +26,6 @@ class FirstSceneViewController: UIViewController {
   
   
   @IBAction func btnFunctionCreateNewRestaurant(sender: AnyObject) {
-    print("create")
     
     let nibSceneCreateRestaurant: NibSceneCreateRestaurant = NSBundle.mainBundle().loadNibNamed("NibSceneCreateRestaurant", owner: self, options: nil)[0] as! NibSceneCreateRestaurant
     
@@ -48,8 +47,22 @@ class FirstSceneViewController: UIViewController {
     
   }
   @IBAction func btnFunctionShowNewRestaurant(sender: AnyObject) {
-    print("show")
     
+    let nibSceneShowRestaurant: NibSceneShowRestaurant = NSBundle.mainBundle().loadNibNamed("NibSceneShowRestaurant", owner: self, options: nil)[0] as! NibSceneShowRestaurant
+    
+    nibSceneShowRestaurant.frame = CGRect(
+      x: UIScreen.mainScreen().bounds.width,
+      y: 0,
+      width: UIScreen.mainScreen().bounds.width,
+      height: UIScreen.mainScreen().bounds.height
+    )
+    
+    UIView.animateWithDuration(0.5, animations: {() -> Void in
+      nibSceneShowRestaurant.frame = UIScreen.mainScreen().bounds
+    })
+    
+    
+    self.view.addSubview(nibSceneShowRestaurant)
   }
   @IBAction func btnFunctionDecideRestaurantForMeal(sender: AnyObject) {
     print("decide")
