@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First Scene View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EatWhat_mobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstSceneViewController" customModule="EatWhat_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat What" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEv-nC-OHq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat What" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEv-nC-OHq" userLabel="labTitle">
                                 <rect key="frame" x="0.0" y="64" width="320" height="85"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -25,15 +25,30 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfH-qg-5Zs" userLabel="btnCreateNewRestaurant">
                                 <rect key="frame" x="130" y="189" width="60" height="30"/>
-                                <state key="normal" title="新增餐廳"/>
+                                <state key="normal" title="新增餐廳">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFunctionCreateNewRestaurant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lRe-bX-eF2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBM-t0-2VF" userLabel="btnShowNewRestaurant">
                                 <rect key="frame" x="130" y="269" width="60" height="30"/>
-                                <state key="normal" title="瀏覽餐廳"/>
+                                <state key="normal" title="瀏覽餐廳">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFunctionShowNewRestaurant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNJ-7D-0QY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jts-gC-rfQ" userLabel="btnDecideRestaurantForMeal">
                                 <rect key="frame" x="130" y="349" width="60" height="30"/>
-                                <state key="normal" title="一鍵決定"/>
+                                <state key="normal" title="一鍵決定">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFunctionDecideRestaurantForMeal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5zT-Cy-BS2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -53,10 +68,15 @@
                             <constraint firstItem="hBM-t0-2VF" firstAttribute="top" secondItem="MfH-qg-5Zs" secondAttribute="bottom" constant="50" id="yu3-kK-D5r"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnCreateNewRestaurant" destination="MfH-qg-5Zs" id="pHO-0z-ae0"/>
+                        <outlet property="btnDecideRestaurantForMeal" destination="Jts-gC-rfQ" id="8fs-E6-5yy"/>
+                        <outlet property="btnShowNewRestaurant" destination="hBM-t0-2VF" id="mNy-e3-mKV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-28" y="370"/>
+            <point key="canvasLocation" x="327" y="398"/>
         </scene>
     </scenes>
 </document>
