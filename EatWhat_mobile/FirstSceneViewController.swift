@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class FirstSceneViewController: UIViewController {
 
   @IBOutlet weak var btnCreateNewRestaurant: UIButton!
@@ -26,6 +27,25 @@ class FirstSceneViewController: UIViewController {
   
   @IBAction func btnFunctionCreateNewRestaurant(sender: AnyObject) {
     print("create")
+    
+    let nibSceneCreateRestaurant: NibSceneCreateRestaurant = NSBundle.mainBundle().loadNibNamed("NibSceneCreateRestaurant", owner: self, options: nil)[0] as! NibSceneCreateRestaurant
+    
+    nibSceneCreateRestaurant.frame = CGRect(
+      x: UIScreen.mainScreen().bounds.width,
+      y: 0,
+      width: UIScreen.mainScreen().bounds.width,
+      height: UIScreen.mainScreen().bounds.height
+    )
+    
+    UIView.animateWithDuration(0.5, animations: {() -> Void in
+      nibSceneCreateRestaurant.frame = UIScreen.mainScreen().bounds
+    })
+    
+    
+    self.view.addSubview(nibSceneCreateRestaurant)
+    
+    
+    
   }
   @IBAction func btnFunctionShowNewRestaurant(sender: AnyObject) {
     print("show")

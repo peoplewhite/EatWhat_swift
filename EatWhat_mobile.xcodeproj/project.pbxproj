@@ -13,6 +13,8 @@
 		14A05BD11C48F0A20034B308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A05BCF1C48F0A20034B308 /* LaunchScreen.storyboard */; };
 		14A05BDB1C48F3FD0034B308 /* FirstSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A05BDA1C48F3FD0034B308 /* FirstSceneViewController.swift */; };
 		14A05BDD1C4923030034B308 /* NibSceneCreateRestaurant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14A05BDC1C4923030034B308 /* NibSceneCreateRestaurant.xib */; };
+		14A05BDF1C49243C0034B308 /* NibSceneCreateRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A05BDE1C49243C0034B308 /* NibSceneCreateRestaurant.swift */; };
+		14A05BE11C49271C0034B308 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A05BE01C49271C0034B308 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		14A05BD21C48F0A20034B308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14A05BDA1C48F3FD0034B308 /* FirstSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstSceneViewController.swift; sourceTree = "<group>"; };
 		14A05BDC1C4923030034B308 /* NibSceneCreateRestaurant.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibSceneCreateRestaurant.xib; sourceTree = "<group>"; };
+		14A05BDE1C49243C0034B308 /* NibSceneCreateRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibSceneCreateRestaurant.swift; sourceTree = "<group>"; };
+		14A05BE01C49271C0034B308 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				14A05BC61C48F0A20034B308 /* AppDelegate.swift */,
-				14A05BDA1C48F3FD0034B308 /* FirstSceneViewController.swift */,
 				14A05BCA1C48F0A20034B308 /* Main.storyboard */,
+				14A05BDA1C48F3FD0034B308 /* FirstSceneViewController.swift */,
 				14A05BDC1C4923030034B308 /* NibSceneCreateRestaurant.xib */,
+				14A05BDE1C49243C0034B308 /* NibSceneCreateRestaurant.swift */,
+				14A05BE01C49271C0034B308 /* Utils.swift */,
 				14A05BCD1C48F0A20034B308 /* Assets.xcassets */,
 				14A05BCF1C48F0A20034B308 /* LaunchScreen.storyboard */,
 				14A05BD21C48F0A20034B308 /* Info.plist */,
@@ -141,6 +147,8 @@
 			files = (
 				14A05BDB1C48F3FD0034B308 /* FirstSceneViewController.swift in Sources */,
 				14A05BC71C48F0A20034B308 /* AppDelegate.swift in Sources */,
+				14A05BDF1C49243C0034B308 /* NibSceneCreateRestaurant.swift in Sources */,
+				14A05BE11C49271C0034B308 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

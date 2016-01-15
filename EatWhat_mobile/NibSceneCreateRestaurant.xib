@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NibSceneCreateRestaurant" customModule="EatWhat_mobile" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -25,6 +25,13 @@
                     <rect key="frame" x="30" y="130" width="260" height="30"/>
                     <state key="normal" title="確認新增"/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A35-KN-3bH" userLabel="btnCancelToCreate">
+                    <rect key="frame" x="30" y="170" width="260" height="30"/>
+                    <state key="normal" title="取消"/>
+                    <connections>
+                        <action selector="btnFunctionExit:" destination="iN0-l3-epB" eventType="touchUpInside" id="thf-Te-dWu"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -37,11 +44,21 @@
                 <constraint firstItem="12p-hm-QSP" firstAttribute="top" secondItem="yxR-ea-zwa" secondAttribute="bottom" constant="20" id="EqS-qI-0HV"/>
                 <constraint firstItem="igT-L8-VCY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="GGo-lq-xvu"/>
                 <constraint firstAttribute="trailing" secondItem="igT-L8-VCY" secondAttribute="trailing" constant="30" id="HKA-hW-1DW"/>
+                <constraint firstItem="A35-KN-3bH" firstAttribute="top" secondItem="12p-hm-QSP" secondAttribute="bottom" constant="10" id="VvU-UE-TGW"/>
                 <constraint firstItem="igT-L8-VCY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="W7O-Ob-7Si"/>
+                <constraint firstItem="A35-KN-3bH" firstAttribute="centerX" secondItem="12p-hm-QSP" secondAttribute="centerX" id="Xj7-Si-cuA"/>
                 <constraint firstItem="12p-hm-QSP" firstAttribute="width" secondItem="igT-L8-VCY" secondAttribute="width" id="g7H-Vy-RRA"/>
                 <constraint firstItem="yxR-ea-zwa" firstAttribute="top" secondItem="igT-L8-VCY" secondAttribute="bottom" constant="20" id="n5t-lB-UNh"/>
+                <constraint firstItem="A35-KN-3bH" firstAttribute="width" secondItem="12p-hm-QSP" secondAttribute="width" id="ngM-Oo-zGw"/>
+                <constraint firstItem="A35-KN-3bH" firstAttribute="height" secondItem="12p-hm-QSP" secondAttribute="height" id="uSf-oA-uym"/>
             </constraints>
-            <point key="canvasLocation" x="390" y="497"/>
+            <connections>
+                <outlet property="btnCancelToCreate" destination="A35-KN-3bH" id="EZZ-hu-zJa"/>
+                <outlet property="btnConfirmToCreate" destination="12p-hm-QSP" id="cN6-z8-8rX"/>
+                <outlet property="textfieldRestaurantAddress" destination="yxR-ea-zwa" id="Ch8-a0-P5c"/>
+                <outlet property="textfieldRestaurantName" destination="igT-L8-VCY" id="1sn-Vr-QRB"/>
+            </connections>
+            <point key="canvasLocation" x="387" y="470"/>
         </view>
     </objects>
 </document>
