@@ -17,7 +17,6 @@ class NibSceneCreateRestaurant: UIView {
   
   
   override func awakeFromNib() {
-    print("hello world")
     
   }
   
