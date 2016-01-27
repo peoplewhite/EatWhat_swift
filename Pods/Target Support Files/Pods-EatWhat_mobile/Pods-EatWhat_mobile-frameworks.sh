@@ -84,10 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-EatWhat_mobile/AFNetworking.framework"
   install_framework "Pods-EatWhat_mobile/Alamofire.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-EatWhat_mobile/AFNetworking.framework"
   install_framework "Pods-EatWhat_mobile/Alamofire.framework"
 fi
