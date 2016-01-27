@@ -23,15 +23,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfH-qg-5Zs" userLabel="btnCreateNewRestaurant">
-                                <rect key="frame" x="130" y="189" width="60" height="30"/>
-                                <state key="normal" title="新增餐廳">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnFunctionCreateNewRestaurant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lRe-bX-eF2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBM-t0-2VF" userLabel="btnShowNewRestaurant">
                                 <rect key="frame" x="130" y="269" width="60" height="30"/>
                                 <state key="normal" title="瀏覽餐廳">
@@ -53,23 +44,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MfH-qg-5Zs" firstAttribute="width" secondItem="hBM-t0-2VF" secondAttribute="width" id="1Re-SR-F4q"/>
-                            <constraint firstItem="MfH-qg-5Zs" firstAttribute="centerX" secondItem="hBM-t0-2VF" secondAttribute="centerX" id="1eV-zV-tUc"/>
                             <constraint firstItem="hBM-t0-2VF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hq-6J-gFn"/>
                             <constraint firstItem="Jts-gC-rfQ" firstAttribute="width" secondItem="hBM-t0-2VF" secondAttribute="width" id="3Pz-Ze-O76"/>
                             <constraint firstItem="Jts-gC-rfQ" firstAttribute="height" secondItem="hBM-t0-2VF" secondAttribute="height" id="9DM-FU-bpQ"/>
-                            <constraint firstItem="MfH-qg-5Zs" firstAttribute="height" secondItem="hBM-t0-2VF" secondAttribute="height" id="DbA-cC-rxZ"/>
                             <constraint firstItem="Jts-gC-rfQ" firstAttribute="top" secondItem="hBM-t0-2VF" secondAttribute="bottom" constant="50" id="EGG-cK-30n"/>
                             <constraint firstItem="uEv-nC-OHq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="RxF-yL-ooR"/>
                             <constraint firstItem="hBM-t0-2VF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a9v-3U-b55"/>
                             <constraint firstItem="uEv-nC-OHq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="dov-DP-bC4"/>
                             <constraint firstItem="uEv-nC-OHq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fHT-W5-DsQ"/>
                             <constraint firstItem="Jts-gC-rfQ" firstAttribute="centerX" secondItem="hBM-t0-2VF" secondAttribute="centerX" id="ssE-bq-ASi"/>
-                            <constraint firstItem="hBM-t0-2VF" firstAttribute="top" secondItem="MfH-qg-5Zs" secondAttribute="bottom" constant="50" id="yu3-kK-D5r"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnCreateNewRestaurant" destination="MfH-qg-5Zs" id="pHO-0z-ae0"/>
                         <outlet property="btnDecideRestaurantForMeal" destination="Jts-gC-rfQ" id="8fs-E6-5yy"/>
                         <outlet property="btnShowNewRestaurant" destination="hBM-t0-2VF" id="mNy-e3-mKV"/>
                     </connections>

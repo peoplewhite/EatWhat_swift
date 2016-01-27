@@ -11,7 +11,6 @@ import UIKit
 
 class FirstSceneViewController: UIViewController {
 
-  @IBOutlet weak var btnCreateNewRestaurant: UIButton!
   @IBOutlet weak var btnShowNewRestaurant: UIButton!
   @IBOutlet weak var btnDecideRestaurantForMeal: UIButton!
   
@@ -25,27 +24,27 @@ class FirstSceneViewController: UIViewController {
     }
   
   
-  @IBAction func btnFunctionCreateNewRestaurant(sender: AnyObject) {
-    
-    let nibSceneCreateRestaurant: NibSceneCreateRestaurant = NSBundle.mainBundle().loadNibNamed("NibSceneCreateRestaurant", owner: self, options: nil)[0] as! NibSceneCreateRestaurant
-    
-    nibSceneCreateRestaurant.frame = CGRect(
-      x: UIScreen.mainScreen().bounds.width,
-      y: 0,
-      width: UIScreen.mainScreen().bounds.width,
-      height: UIScreen.mainScreen().bounds.height
-    )
-    
-    UIView.animateWithDuration(0.5, animations: {() -> Void in
-      nibSceneCreateRestaurant.frame = UIScreen.mainScreen().bounds
-    })
-    
-    
-    self.view.addSubview(nibSceneCreateRestaurant)
-    
-    
-    
-  }
+//  @IBAction func btnFunctionCreateNewRestaurant(sender: AnyObject) {
+//    
+//    let nibSceneCreateRestaurant: NibSceneCreateRestaurant = NSBundle.mainBundle().loadNibNamed("NibSceneCreateRestaurant", owner: self, options: nil)[0] as! NibSceneCreateRestaurant
+//    
+//    nibSceneCreateRestaurant.frame = CGRect(
+//      x: UIScreen.mainScreen().bounds.width,
+//      y: 0,
+//      width: UIScreen.mainScreen().bounds.width,
+//      height: UIScreen.mainScreen().bounds.height
+//    )
+//    
+//    UIView.animateWithDuration(0.5, animations: {() -> Void in
+//      nibSceneCreateRestaurant.frame = UIScreen.mainScreen().bounds
+//    })
+//    
+//    
+//    self.view.addSubview(nibSceneCreateRestaurant)
+//    
+//    
+//    
+//  }
   @IBAction func btnFunctionShowNewRestaurant(sender: AnyObject) {
     
     let nibSceneShowRestaurant: NibSceneShowRestaurant = NSBundle.mainBundle().loadNibNamed("NibSceneShowRestaurant", owner: self, options: nil)[0] as! NibSceneShowRestaurant

@@ -62,7 +62,10 @@
                 <constraint firstItem="ghr-Jm-UJN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mtA-Fg-7zT"/>
                 <constraint firstItem="ghr-Jm-UJN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wyV-N8-VrF"/>
             </constraints>
-            <point key="canvasLocation" x="221" y="349"/>
+            <connections>
+                <outlet property="tableView" destination="ghr-Jm-UJN" id="oN7-eD-dD4"/>
+            </connections>
+            <point key="canvasLocation" x="58" y="105"/>
         </view>
     </objects>
 </document>
