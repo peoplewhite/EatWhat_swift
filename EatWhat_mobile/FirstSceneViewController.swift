@@ -64,7 +64,18 @@ class FirstSceneViewController: UIViewController {
     self.view.addSubview(nibSceneShowRestaurant)
   }
   @IBAction func btnFunctionDecideRestaurantForMeal(sender: AnyObject) {
-    print("decide")
+    
+    showChosenRestaurantScene()
+
+  }
+  
+  func showChosenRestaurantScene() {
+    
+    let nibViewChosenRestaurant: NibChosenRestaurant = NSBundle.mainBundle().loadNibNamed("NibChosenRestaurant", owner: self, options: nil)[0] as! NibChosenRestaurant
+    nibViewChosenRestaurant.frame = UIScreen.mainScreen().bounds
+    nibViewChosenRestaurant.labRestaurantName.text = "123"
+    nibViewChosenRestaurant.labRestaurantAddress.text = "456"
+    view.addSubview(nibViewChosenRestaurant)
     
   }
   
