@@ -77,16 +77,25 @@ class FirstSceneViewController: UIViewController {
   }
   @IBAction func btnFunctionDecideRestaurantForMeal(sender: AnyObject) {
     
-    showChosenRestaurantScene()
+//    showChosenRestaurantScene()
+    pickRestaurantByRandom()
 
   }
   
-  func showChosenRestaurantScene() {
+  func pickRestaurantByRandom() {
+    
+    let diceRoll = Int(arc4random_uniform(UInt32(arrAllRestaurantsData.count)))
+    
+    showChosenRestaurantScene(diceRoll)
+    
+  }
+  
+  func showChosenRestaurantScene(numRandom: Int) {
     
     let nibViewChosenRestaurant: NibChosenRestaurant = NSBundle.mainBundle().loadNibNamed("NibChosenRestaurant", owner: self, options: nil)[0] as! NibChosenRestaurant
     nibViewChosenRestaurant.frame = UIScreen.mainScreen().bounds
-    nibViewChosenRestaurant.labRestaurantName.text = "123"
-    nibViewChosenRestaurant.labRestaurantAddress.text = "456"
+    nibViewChosenRestaurant.labRestaurantName.text = arrAllRestaurantsData[numRandom]["name"] as? String
+    nibViewChosenRestaurant.labRestaurantAddress.text = arrAllRestaurantsData[numRandom]["address"] as? String
     view.addSubview(nibViewChosenRestaurant)
     
   }
