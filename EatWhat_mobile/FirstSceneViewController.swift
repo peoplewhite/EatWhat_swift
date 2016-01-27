@@ -7,18 +7,25 @@
 //
 
 import UIKit
-
+import Alamofire
 
 class FirstSceneViewController: UIViewController {
 
   @IBOutlet weak var btnShowNewRestaurant: UIButton!
   @IBOutlet weak var btnDecideRestaurantForMeal: UIButton!
   
+  var arrAllRestaurantsData:NSArray = []
+  
+  var nibSceneShowRestaurant: NibSceneShowRestaurant = NibSceneShowRestaurant()
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      callAPIToGetAllRestaurant()
 
     }
-
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -47,7 +54,7 @@ class FirstSceneViewController: UIViewController {
 //  }
   @IBAction func btnFunctionShowNewRestaurant(sender: AnyObject) {
     
-    let nibSceneShowRestaurant: NibSceneShowRestaurant = NSBundle.mainBundle().loadNibNamed("NibSceneShowRestaurant", owner: self, options: nil)[0] as! NibSceneShowRestaurant
+    nibSceneShowRestaurant = NSBundle.mainBundle().loadNibNamed("NibSceneShowRestaurant", owner: self, options: nil)[0] as! NibSceneShowRestaurant
     
     nibSceneShowRestaurant.frame = CGRect(
       x: UIScreen.mainScreen().bounds.width,
@@ -57,9 +64,14 @@ class FirstSceneViewController: UIViewController {
     )
     
     UIView.animateWithDuration(0.5, animations: {() -> Void in
-      nibSceneShowRestaurant.frame = UIScreen.mainScreen().bounds
+      
+      self.nibSceneShowRestaurant.frame = UIScreen.mainScreen().bounds
+      
+      }, completion: {(finished: Bool) -> Void in
+        
+        self.nibSceneShowRestaurant.setDataSourceForTable(self.arrAllRestaurantsData)
+        
     })
-    
     
     self.view.addSubview(nibSceneShowRestaurant)
   }
@@ -77,6 +89,27 @@ class FirstSceneViewController: UIViewController {
     nibViewChosenRestaurant.labRestaurantAddress.text = "456"
     view.addSubview(nibViewChosenRestaurant)
     
+  }
+  
+  func callAPIToGetAllRestaurant() {
+    
+    let strURL: String = "http://eatwhat-new.dev/restaurants.json"
+    
+    Alamofire.request(.GET, strURL)
+      .responseJSON { response in
+        //        print(response.request)  // original URL request
+        //        print(response.response) // URL response
+        //        print(response.data)     // server data
+        //        print(response.result)   // result of response serialization
+        
+        if let JSON = response.result.value {
+//          print("JSON: \(JSON)")
+          self.arrAllRestaurantsData = JSON as! NSArray
+          print("data: \(self.arrAllRestaurantsData)")
+          
+        }
+    }
+ 
   }
   
 }

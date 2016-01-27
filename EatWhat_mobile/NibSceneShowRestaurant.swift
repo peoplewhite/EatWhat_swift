@@ -23,26 +23,11 @@ class NibSceneShowRestaurant: UIView, UITableViewDelegate, UITableViewDataSource
     tableView.registerNib(UINib(nibName: kCellIdentifier, bundle: nil), forCellReuseIdentifier: kCellIdentifier)
     tableView.tableFooterView = UIView()
     
-    
-
-    
-    
-    let strURL: String = "http://eatwhat-new.dev/restaurants.json"
-    
-    Alamofire.request(.GET, strURL)
-      .responseJSON { response in
-//        print(response.request)  // original URL request
-//        print(response.response) // URL response
-//        print(response.data)     // server data
-//        print(response.result)   // result of response serialization
-        
-        if let JSON = response.result.value {
-          print("JSON: \(JSON)")
-          self.arrAllRestaurantsData = JSON as! NSArray
-          
-          self.tableView.reloadData()
-        }
-    }
+  }
+  
+  func setDataSourceForTable(arrSetAllRestaurantData: NSArray) {
+    arrAllRestaurantsData = arrSetAllRestaurantData
+    tableView.reloadData()
   }
 
   @IBAction func btnFunctionBack(sender: AnyObject) {
