@@ -21,7 +21,6 @@
 		14A05BE11C49271C0034B308 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A05BE01C49271C0034B308 /* Utils.swift */; };
 		14A05BE41C49370B0034B308 /* NibSceneShowRestaurant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14A05BE31C49370B0034B308 /* NibSceneShowRestaurant.xib */; };
 		14A05BE61C49372C0034B308 /* NibSceneShowRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A05BE51C49372C0034B308 /* NibSceneShowRestaurant.swift */; };
-		14D8CB0A1C4BB8EB00122333 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D8CB091C4BB8EB00122333 /* API.m */; };
 		F2F54BD031300E4D4A512135 /* Pods_EatWhat_mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AFC499360B273F6802A05A /* Pods_EatWhat_mobile.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +41,6 @@
 		14A05BE01C49271C0034B308 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		14A05BE31C49370B0034B308 /* NibSceneShowRestaurant.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibSceneShowRestaurant.xib; sourceTree = "<group>"; };
 		14A05BE51C49372C0034B308 /* NibSceneShowRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibSceneShowRestaurant.swift; sourceTree = "<group>"; };
-		14D8CB021C4BB35F00122333 /* EatWhat_mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EatWhat_mobile-Bridging-Header.h"; sourceTree = "<group>"; };
-		14D8CB081C4BB8EB00122333 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
-		14D8CB091C4BB8EB00122333 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
 		4E5C5DE9CF632B04B58CD6D3 /* Pods-EatWhat_mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatWhat_mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatWhat_mobile/Pods-EatWhat_mobile.release.xcconfig"; sourceTree = "<group>"; };
 		86AFC499360B273F6802A05A /* Pods_EatWhat_mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatWhat_mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6D88747064E0B2C5B5156B /* Pods-EatWhat_mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatWhat_mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatWhat_mobile/Pods-EatWhat_mobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +67,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		1486AC671C591667002CC5D3 /* show chosen restaurant scene */ = {
+			isa = PBXGroup;
+			children = (
+				1486AC631C58CFA4002CC5D3 /* NibChosenRestaurant.xib */,
+				1486AC651C58D0A0002CC5D3 /* NibChosenRestaurant.swift */,
+			);
+			name = "show chosen restaurant scene";
+			sourceTree = "<group>";
+		};
+		1486AC681C59168D002CC5D3 /* first scene */ = {
+			isa = PBXGroup;
+			children = (
+				14A05BDA1C48F3FD0034B308 /* FirstSceneViewController.swift */,
+			);
+			name = "first scene";
+			sourceTree = "<group>";
+		};
 		14A05BBA1C48F0A20034B308 = {
 			isa = PBXGroup;
 			children = (
@@ -94,15 +107,11 @@
 			children = (
 				14A05BC61C48F0A20034B308 /* AppDelegate.swift */,
 				14A05BCA1C48F0A20034B308 /* Main.storyboard */,
-				14A05BDA1C48F3FD0034B308 /* FirstSceneViewController.swift */,
+				1486AC681C59168D002CC5D3 /* first scene */,
 				14A05BE71C4937310034B308 /* show restaurant scene */,
-				14A05BE21C4936D40034B308 /* create scene */,
-				14D8CB021C4BB35F00122333 /* EatWhat_mobile-Bridging-Header.h */,
+				14A05BE21C4936D40034B308 /* create restaurant scene */,
+				1486AC671C591667002CC5D3 /* show chosen restaurant scene */,
 				14A05BE01C49271C0034B308 /* Utils.swift */,
-				1486AC631C58CFA4002CC5D3 /* NibChosenRestaurant.xib */,
-				1486AC651C58D0A0002CC5D3 /* NibChosenRestaurant.swift */,
-				14D8CB081C4BB8EB00122333 /* API.h */,
-				14D8CB091C4BB8EB00122333 /* API.m */,
 				14A05BCD1C48F0A20034B308 /* Assets.xcassets */,
 				14A05BCF1C48F0A20034B308 /* LaunchScreen.storyboard */,
 				14A05BD21C48F0A20034B308 /* Info.plist */,
@@ -110,13 +119,13 @@
 			path = EatWhat_mobile;
 			sourceTree = "<group>";
 		};
-		14A05BE21C4936D40034B308 /* create scene */ = {
+		14A05BE21C4936D40034B308 /* create restaurant scene */ = {
 			isa = PBXGroup;
 			children = (
 				14A05BDC1C4923030034B308 /* NibSceneCreateRestaurant.xib */,
 				14A05BDE1C49243C0034B308 /* NibSceneCreateRestaurant.swift */,
 			);
-			name = "create scene";
+			name = "create restaurant scene";
 			sourceTree = "<group>";
 		};
 		14A05BE71C4937310034B308 /* show restaurant scene */ = {
@@ -264,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14D8CB0A1C4BB8EB00122333 /* API.m in Sources */,
 				14A05BDB1C48F3FD0034B308 /* FirstSceneViewController.swift in Sources */,
 				14A05BC71C48F0A20034B308 /* AppDelegate.swift in Sources */,
 				14A05BDF1C49243C0034B308 /* NibSceneCreateRestaurant.swift in Sources */,
@@ -333,7 +341,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -371,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

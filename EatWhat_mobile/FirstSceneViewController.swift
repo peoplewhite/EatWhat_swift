@@ -78,7 +78,8 @@ class FirstSceneViewController: UIViewController {
   @IBAction func btnFunctionDecideRestaurantForMeal(sender: AnyObject) {
     
 //    showChosenRestaurantScene()
-    pickRestaurantByRandom()
+//    pickRestaurantByRandom()
+    pickRestaurantByCallAPI()
 
   }
   
@@ -90,19 +91,54 @@ class FirstSceneViewController: UIViewController {
     
   }
   
+  func pickRestaurantByCallAPI() {
+    
+    //    let strURL: String = "http://eatwhat-new.dev/restaurants.json"
+    let strURL: String = "http://192.168.0.101:3000/get_random_restaurant.json"
+    Alamofire.request(.GET, strURL)
+      .responseJSON { response in
+        //        print(response.request)  // original URL request
+        //        print(response.response) // URL response
+        //        print(response.data)     // server data
+        //        print(response.result)   // result of response serialization
+        
+        if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+//          self.arrAllRestaurantsData = JSON as! NSArray
+//          print("data: \(self.arrAllRestaurantsData)")
+          let arrTemp:NSArray = JSON as! NSArray
+          self.showChosenRestaurantSceneWithData(arrTemp[0] as! Dictionary)
+          
+        }
+    }
+  }
+  
   func showChosenRestaurantScene(numRandom: Int) {
     
     let nibViewChosenRestaurant: NibChosenRestaurant = NSBundle.mainBundle().loadNibNamed("NibChosenRestaurant", owner: self, options: nil)[0] as! NibChosenRestaurant
     nibViewChosenRestaurant.frame = UIScreen.mainScreen().bounds
-    nibViewChosenRestaurant.labRestaurantName.text = arrAllRestaurantsData[numRandom]["name"] as? String
+    nibViewChosenRestaurant.labRestaurantName.text = "\"\(arrAllRestaurantsData[numRandom]["name"] as! String)\""
+    
     nibViewChosenRestaurant.labRestaurantAddress.text = arrAllRestaurantsData[numRandom]["address"] as? String
+    view.addSubview(nibViewChosenRestaurant)
+    
+  }
+  
+  func showChosenRestaurantSceneWithData(dictChosenRestaurant: Dictionary<String, AnyObject>) {
+    
+    let nibViewChosenRestaurant: NibChosenRestaurant = NSBundle.mainBundle().loadNibNamed("NibChosenRestaurant", owner: self, options: nil)[0] as! NibChosenRestaurant
+    nibViewChosenRestaurant.frame = UIScreen.mainScreen().bounds
+    nibViewChosenRestaurant.labRestaurantName.text = "\"\(dictChosenRestaurant["name"] as! String)\""
+   dictChosenRestaurant
+    nibViewChosenRestaurant.labRestaurantAddress.text = dictChosenRestaurant["address"] as? String
     view.addSubview(nibViewChosenRestaurant)
     
   }
   
   func callAPIToGetAllRestaurant() {
     
-    let strURL: String = "http://eatwhat-new.dev/restaurants.json"
+//    let strURL: String = "http://eatwhat-new.dev/restaurants.json"
+    let strURL: String = "http://192.168.0.101:3000/restaurants.json"
     
     Alamofire.request(.GET, strURL)
       .responseJSON { response in
@@ -120,5 +156,8 @@ class FirstSceneViewController: UIViewController {
     }
  
   }
+  
+  
+  
   
 }
