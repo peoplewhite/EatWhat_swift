@@ -7,30 +7,31 @@
 //
 
 import UIKit
+import Alamofire
 
 class NibSceneShowRestaurant: UIView {
   
   override func awakeFromNib() {
-    //這裡的寫法看這裡
-//   https://medium.com/@aommiez/afnetwork-integrate-swfit-80514b545b40#.lso3gtuzl 
+    
+    let strURL: String = "http://eatwhat-new.dev/restaurants.json"
+    
+    Alamofire.request(.GET, strURL)
+      .responseJSON { response in
+        print(response.request)  // original URL request
+        print(response.response) // URL response
+        print(response.data)     // server data
+        print(response.result)   // result of response serialization
+        
+        if let JSON = response.result.value {
+          print("JSON: \(JSON)")
+        }
+    }
     
     
     
     
     
-    var strURL: String = "http://eatwhat-new.dev/restaurants.json"
-//    var strAPIName: String = "get all address in settings"
-//    if utilsObj.isShowLog {
-//      NSLog("[api] %@", strAPIName)
-//    }
-//    manager.requestSerializer.setValue(utilsObj.kwUserAuthToken, forHTTPHeaderField: "auth_token")
-    manager.GET(strURL, parameters: nil, success: {(operation: AFHTTPRequestOperation, responseObject: AnyObject) -> Void in
-      if utilsObj.isShowLog {
-        NSLog("response from %@  %@", strAPIName, responseObject!)
-      }
-      }, failure: {(operation: AFHTTPRequestOperation, error: NSError) -> Void in
-        utilsObj.getErrorMessage(error!, andName: strAPIName)
-    })
+    
  
   }
 
